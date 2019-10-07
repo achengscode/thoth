@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+DOCKERFILE="docker-compose-local.yml"
+
+docker-compose -f $DOCKERFILE up && docker attach $(docker-compose -f $DOCKERFILE ps -q thoth)

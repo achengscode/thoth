@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  thoth:
+    build: .
+    ports:
+      - "4000:4000"
+    command: ['./run.sh']
+    volumes:
+      - .:/var/www/app
