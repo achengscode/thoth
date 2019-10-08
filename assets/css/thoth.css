@@ -1,0 +1,14 @@
+#blog {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+
+#raw-text{
+  border-right: 2px solid;
+}
+
+#rendered-text{
+  padding-left: 10px;
+  border-left: 2px solid;
+}

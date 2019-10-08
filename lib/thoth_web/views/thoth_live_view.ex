@@ -1,30 +1,12 @@
 defmodule ThothWeb.ThothLiveView do
   use Phoenix.LiveView
+  alias ThothWeb.ThothView
 
   def render(assigns) do
-    ~L"""
-    <h1>
-      Type stuff here
-    </h1>
-
-    <form phx-change='render'>
-      <div id='raw-text'>
-        <textarea name="input_md" phx-change="render">
-          <%= @input_md %>
-        </textarea>
-      </div>
-    </form>
-
-    <div>
-      <div id='rendered-text'>
-        <%= @output_html %>
-      </div>
-    </div>
-    """
+    ThothView.render("render.html", assigns)
   end
 
   def mount(_session, socket) do
-    if connected?(socket), do: IO.puts("WE'RE CONNECTED")
     {:ok, assign(socket, input_md: nil, output_html: nil)}
   end
 

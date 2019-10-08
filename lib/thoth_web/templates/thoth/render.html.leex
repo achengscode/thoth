@@ -2,16 +2,15 @@
   Type stuff here
 </h1>
 
-<form phx-change='render'>
-  <div id='raw-text'>
-    <textarea name="input_md" phx-change="render">
-      <%= @input_md %>
-    </textarea>
-  </div>
-</form>
 
-<div>
-  <div id='rendered-text'>
-    <%= @output_html %>
+<div id='blog'>
+  <div id='raw-text'>
+  <form phx-change='render'>
+    <textarea name="input_md" phx-change="render"><%= @input_md %></textarea>
+  </form>
+  </div>
+
+  <div id="rendered-text">
+    <%= raw @output_html %>
   </div>
 </div>
