@@ -20,8 +20,8 @@ defmodule ThothWeb.Router do
   scope "/", ThothWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/thoth", ThothController, :index
+    # get "/", PageController, :index
+    get "/", ThothController, :index
   end
 
   # Other scopes may use custom stacks.
